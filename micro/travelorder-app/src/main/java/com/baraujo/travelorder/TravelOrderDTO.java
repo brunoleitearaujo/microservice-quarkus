@@ -1,8 +1,5 @@
 package com.baraujo.travelorder;
 
-import com.baraujo.flight.Flight;
-import com.baraujo.hotel.Hotel;
-
 public class TravelOrderDTO {
 
     private String fromAirport;
@@ -27,7 +24,7 @@ public class TravelOrderDTO {
             hotel = new Hotel();
         }
 
-        return new TravelOrderDTO(flight.fromAirport, flight.toAirport, hotel.nights);
+        return new TravelOrderDTO(flight.getFromAirport(), flight.getToAirport(), hotel.getNights());
     }
 
     public static TravelOrderDTO of(String fromAirport, String toAirport, Integer nights) {
